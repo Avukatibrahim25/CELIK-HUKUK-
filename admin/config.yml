@@ -1,0 +1,34 @@
+# Blog yönetim paneli ayarları (Decap CMS)
+# Site GitHub'a yüklendikten sonra aşağıdaki "repo" satırını kendi deponuzla değiştirin.
+# Netlify'da: Site configuration > Access & security > OAuth > GitHub sağlayıcısını ekleyin.
+backend:
+  name: github
+  repo: KULLANICI_ADI/celik-hukuk   # <-- değiştirin
+  branch: main
+
+locale: tr
+media_folder: img/blog
+public_folder: img/blog
+
+collections:
+  - name: blog
+    label: Blog
+    files:
+      - name: yazilar
+        label: Blog Yazıları
+        file: blog/yazilar.json
+        fields:
+          - name: yazilar
+            label: Yazılar
+            label_singular: Yazı
+            widget: list
+            summary: "{{fields.tarih | date('DD.MM.YYYY')}} — {{fields.baslik}}"
+            fields:
+              - { name: baslik, label: Başlık, widget: string }
+              - { name: slug, label: "Adres (küçük harf, tire ile — ör. mirasin-reddi)", widget: string, pattern: ['^[a-z0-9-]+$', "Sadece küçük harf, rakam ve tire kullanın"] }
+              - { name: tarih, label: Tarih, widget: datetime, format: "YYYY-MM-DD", date_format: "DD.MM.YYYY", time_format: false }
+              - { name: kategori, label: Kategori, widget: select, options: ["İcra ve İflas Hukuku", "Ceza Hukuku", "Miras Hukuku", "Ticaret Hukuku", "Genel"] }
+              - { name: ozet, label: "Kısa özet (listede görünür)", widget: text }
+              - { name: kapak, label: "Kapak görseli (isteğe bağlı)", widget: image, required: false }
+              - { name: yayinda, label: Yayında, widget: boolean, default: true }
+              - { name: icerik, label: Yazı, widget: markdown }

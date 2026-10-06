@@ -1,0 +1,22 @@
+# Netlify ayarları — site bu klasörün içeriği olduğu gibi yayınlanır (derleme adımı yok)
+[build]
+  publish = "."
+
+# PDF'ler ve görseller uzun süre önbellekte kalsın
+[[headers]]
+  for = "/dilekceler/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+# Güvenlik başlıkları
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Frame-Options = "SAMEORIGIN"

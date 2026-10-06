@@ -1,0 +1,14 @@
+{
+  "yazilar": [
+    {
+      "baslik": "Ödeme Emrine İtiraz: Süreler ve Dikkat Edilmesi Gerekenler",
+      "slug": "odeme-emrine-itiraz",
+      "tarih": "2026-09-23",
+      "kategori": "İcra ve İflas Hukuku",
+      "ozet": "İcra takibinde size ödeme emri geldiyse itiraz süresi, itirazın nasıl yapılacağı ve sonrasında sizi nelerin beklediğini özetledik.",
+      "kapak": "",
+      "yayinda": true,
+      "icerik": "Adınıza bir icra takibi başlatıldığında size **ödeme emri** tebliğ edilir. Ödeme emri, borcun ödenmesini ya da süresi içinde itiraz edilmesini ister. Süreyi kaçırmak takibin kesinleşmesine yol açabileceğinden, tebligatı aldığınız andan itibaren dikkatli olmanız gerekir.\n\n## İtiraz süresi kaç gündür?\n\n- **İlamsız takiplerde** ödeme emrine itiraz süresi, tebliğden itibaren **7 gündür**. İtiraz, takibi yapan icra dairesine yazılı ya da sözlü olarak yapılır.\n- **Kambiyo senetlerine (çek, senet, poliçe) dayalı takiplerde** borca veya imzaya itiraz süresi **5 gündür** ve itiraz icra dairesine değil, **icra mahkemesine** yapılır.\n\nSürenin son günü resmi tatile denk gelirse süre, tatili takip eden ilk iş gününün mesai bitiminde sona erer.\n\n## İtiraz nasıl yapılır?\n\nİlamsız takiplerde itirazın sebebini göstermek zorunlu değildir; borca itiraz etmeniz takibi durdurur. Ancak takibe dayanak belgedeki **imzanın size ait olmadığını** ileri sürüyorsanız bunu ayrıca ve açıkça belirtmeniz gerekir. Aksi hâlde imzayı kabul etmiş sayılabilirsiniz.\n\nKambiyo senetlerine dayalı takiplerde ise icra mahkemesine yapılan itiraz, takibi kendiliğinden durdurmaz. Takibin durdurulması için mahkemeden ayrıca karar alınması gerekebilir.\n\n## İtiraz ettikten sonra ne olur?\n\nİtirazınızla takip durursa alacaklı iki yola başvurabilir:\n\n1. **İtirazın kaldırılması:** Alacaklı elinde belirli belgeler varsa icra mahkemesinden itirazın kaldırılmasını isteyebilir.\n2. **İtirazın iptali davası:** Alacaklı, itirazın kendisine tebliğinden itibaren bir yıl içinde genel mahkemede dava açabilir.\n\nİtirazın haksız bulunması hâlinde borçlu aleyhine, alacağın yüzde yirmisinden az olmamak üzere **icra inkâr tazminatına** hükmedilebilir. Bu nedenle itiraz kararını verirken borcun durumunu doğru değerlendirmek önemlidir.\n\n## İtiraz etmezseniz\n\nSüresinde itiraz edilmeyen takip kesinleşir ve alacaklı haciz işlemlerine başlayabilir. Ayrıca borçlunun kanunda belirtilen süre içinde **mal beyanında** bulunma yükümlülüğü vardır.\n\n> Her dosyanın koşulları farklıdır. Ödeme emri aldıysanız süre geçmeden bir avukata danışmanız, hak kaybı yaşamamanız için en güvenli yoldur."
+    }
+  ]
+}
