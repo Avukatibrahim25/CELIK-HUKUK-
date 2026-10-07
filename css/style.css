@@ -444,8 +444,7 @@ footer p { color: var(--text); font-size: 15px; }
 .prose li { margin-bottom: 6px; }
 
 /* ---------- WhatsApp sohbet balonu ---------- */
-/* Netlify ücretsiz planı sağ alta küçük bir "Powered by Netlify" etiketi koyuyor; balon onun üstünde dursun */
-.wa-widget { position: fixed; right: 20px; bottom: 64px; z-index: 70; display: flex; flex-direction: column; align-items: flex-end; gap: 12px; font-family: var(--sans); }
+.wa-widget { position: fixed; right: 20px; bottom: 20px; z-index: 70; display: flex; flex-direction: column; align-items: flex-end; gap: 12px; font-family: var(--sans); }
 .wa-toggle {
   display: inline-flex; align-items: center; gap: 10px; padding: 13px 20px; border-radius: 999px; border: 0; cursor: pointer;
   background: var(--ink); color: #fff; font: 700 15px var(--sans); box-shadow: var(--shadow-strong); transition: background .2s, transform .2s;
@@ -530,7 +529,7 @@ footer p { color: var(--text); font-size: 15px; }
   .doc { flex-wrap: wrap; }
   .posts, .tool-grid, .links-grid, .services { grid-template-columns: 1fr; }
   .tool { padding: 24px 18px; }
-  .wa-widget { right: 14px; bottom: 60px; }
+  .wa-widget { right: 14px; bottom: 14px; }
   .wa-toggle span { display: none; }
   .wa-toggle { padding: 15px; }
 }
