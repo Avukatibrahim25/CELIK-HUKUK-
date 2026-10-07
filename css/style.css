@@ -77,12 +77,13 @@ strong { color: var(--ink); font-weight: 700; }
   box-shadow: 0 14px 22px -10px rgba(0, 0, 0, .35);
   margin-bottom: 10px;
 }
-.logo { display: inline-block; color: var(--ink); font-family: var(--logo); line-height: 1; }
+/* Örnek sitedeki gibi alt alta, sıkı yazılmış isim logosu */
+.logo { display: inline-block; text-align: left; color: var(--ink); font-family: "Old Standard TT", "Times New Roman", serif; }
 .logo:hover { color: var(--ink); }
-.logo .mark { display: block; width: clamp(180px, 28vw, 250px); margin: 0 auto 12px; }
-.logo .mark svg { width: 100%; height: auto; display: block; }
-.logo .main { display: block; font-size: clamp(46px, 8vw, 78px); font-weight: 700; letter-spacing: .04em; color: var(--ink); }
-.logo .sub { display: block; font-size: clamp(16px, 2.6vw, 25px); font-weight: 600; letter-spacing: .03em; margin-top: 6px; color: #3a3a3a; }
+.logo .pre { display: block; font-size: clamp(18px, 3vw, 32px); font-weight: 400; letter-spacing: .05em; line-height: 1; margin: 0 0 0 .08em; }
+.logo .pre + .name { margin-top: .3em; } /* İ noktası "AVUKAT"a değmesin */
+.logo .name { display: block; font-size: clamp(54px, 10.5vw, 120px); font-weight: 700; letter-spacing: -.04em; line-height: .9; }
+.logo .name.l2 { margin-left: .6em; }
 
 /* Sağdaki hızlı iletişim ikonları (örnekteki gibi siyah kareler) */
 .quick {
@@ -317,8 +318,7 @@ a.tile:hover { color: var(--text); transform: translateY(-4px); box-shadow: var(
 footer { background: var(--bg); border-top: 1px solid var(--line-soft); padding: 56px 0 24px; margin-top: 30px; }
 .foot-grid { display: grid; grid-template-columns: 1.3fr 1fr 1fr 1.2fr; gap: 36px; }
 .foot-bottom a { color: var(--muted); text-decoration: underline; }
-.foot-logo { font-family: var(--logo); font-weight: 700; font-size: 34px; color: var(--ink); line-height: 1.1; }
-.foot-logo small { display: block; font-size: 15px; font-weight: 600; color: #3a3a3a; margin-top: 4px; }
+.foot-logo { font-family: var(--logo); font-weight: 600; font-size: 18px; letter-spacing: .03em; color: var(--ink); line-height: 1.3; }
 footer h4 { font-family: var(--sans); font-size: 12.5px; letter-spacing: .22em; text-transform: uppercase; color: var(--muted); margin-bottom: 14px; }
 footer ul { list-style: none; padding: 0; margin: 0; }
 footer li { margin-bottom: 8px; font-size: 15px; color: var(--text); }
@@ -444,7 +444,8 @@ footer p { color: var(--text); font-size: 15px; }
 .prose li { margin-bottom: 6px; }
 
 /* ---------- WhatsApp sohbet balonu ---------- */
-.wa-widget { position: fixed; right: 20px; bottom: 20px; z-index: 70; display: flex; flex-direction: column; align-items: flex-end; gap: 12px; font-family: var(--sans); }
+/* Netlify ücretsiz planı sağ alta küçük bir "Powered by Netlify" etiketi koyuyor; balon onun üstünde dursun */
+.wa-widget { position: fixed; right: 20px; bottom: 64px; z-index: 70; display: flex; flex-direction: column; align-items: flex-end; gap: 12px; font-family: var(--sans); }
 .wa-toggle {
   display: inline-flex; align-items: center; gap: 10px; padding: 13px 20px; border-radius: 999px; border: 0; cursor: pointer;
   background: var(--ink); color: #fff; font: 700 15px var(--sans); box-shadow: var(--shadow-strong); transition: background .2s, transform .2s;
@@ -463,8 +464,8 @@ footer p { color: var(--text); font-size: 15px; }
 }
 .wa-panel[hidden], .wa-teaser[hidden] { display: none; }
 .wa-head { display: flex; align-items: center; gap: 12px; padding: 16px 18px; background: var(--ink); color: #fff; }
-.wa-avatar { flex: none; width: 44px; height: 44px; border-radius: 50%; background: #fff; display: grid; place-items: center; padding: 6px; }
-.wa-avatar svg { width: 100%; height: auto; }
+.wa-avatar { flex: none; width: 44px; height: 44px; border-radius: 50%; background: #fff; display: grid; place-items: center; color: var(--ink); font: 700 18px "Old Standard TT", serif; letter-spacing: -.04em; }
+.portrait .emblem .mono { font: 700 clamp(90px, 14vw, 150px) "Old Standard TT", serif; letter-spacing: -.05em; color: #b5b5b5; line-height: 1; }
 .wa-head b { display: block; font-size: 15px; }
 .wa-head small { font-size: 12.5px; color: #bbb; display: flex; align-items: center; gap: 6px; }
 .wa-head small::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: #25d366; }
@@ -529,7 +530,27 @@ footer p { color: var(--text); font-size: 15px; }
   .doc { flex-wrap: wrap; }
   .posts, .tool-grid, .links-grid, .services { grid-template-columns: 1fr; }
   .tool { padding: 24px 18px; }
-  .wa-widget { right: 14px; bottom: 14px; }
+  .wa-widget { right: 14px; bottom: 60px; }
   .wa-toggle span { display: none; }
   .wa-toggle { padding: 15px; }
 }
+
+/* 5 faaliyet alanı: üstte 3, altta ortalı 2 kart */
+.cards.five { grid-template-columns: repeat(6, 1fr); gap: 22px; }
+.cards.five .card { grid-column: span 2; padding: 30px 24px; }
+.cards.five .card:nth-child(4) { grid-column: 2 / span 2; }
+@media (max-width: 960px) {
+  .cards.five { grid-template-columns: repeat(2, 1fr); }
+  .cards.five .card, .cards.five .card:nth-child(4) { grid-column: auto; }
+  .cards.five .card:last-child { grid-column: 1 / -1; }
+}
+@media (max-width: 600px) {
+  .cards.five { grid-template-columns: 1fr; }
+  .cards.five .card:last-child { grid-column: auto; }
+}
+/* Faaliyet alanı fotoğrafları */
+.area-cover { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 16px; margin: 0 0 28px; box-shadow: var(--shadow); filter: grayscale(1) contrast(1.05); }
+.card .card-img { margin: -30px -24px 20px; aspect-ratio: 16 / 9; overflow: hidden; border-radius: var(--radius) var(--radius) 0 0; }
+.card .card-img img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1); transition: transform .4s, filter .4s; }
+.card:hover .card-img img { transform: scale(1.04); filter: grayscale(.2); }
+.cards.centered .card .card-img + .icon { margin-top: -48px; position: relative; background: #fff; box-shadow: 0 4px 12px rgba(0, 0, 0, .12); }
