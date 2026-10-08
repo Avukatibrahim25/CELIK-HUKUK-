@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: /admin/
 
-Sitemap: https://avukatibrahimcelik.com/sitemap.xml
+Sitemap: https://www.avukatibrahimcelik.com/sitemap.xml
