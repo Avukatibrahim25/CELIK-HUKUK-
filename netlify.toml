@@ -2,12 +2,8 @@
 [build]
   publish = "."
 
-# PDF'ler ve görseller uzun süre önbellekte kalsın
-[[headers]]
-  for = "/dilekceler/*"
-  [headers.values]
-    Cache-Control = "public, max-age=604800"
-
+# Görseller uzun süre önbellekte kalsın
+# ("/dilekceler/*" kuralı /dilekceler sayfasını da yakalayıp 1 hafta eski gösterdiği için kaldırıldı)
 [[headers]]
   for = "/img/*"
   [headers.values]
